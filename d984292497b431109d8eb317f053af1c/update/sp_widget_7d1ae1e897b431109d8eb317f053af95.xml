@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {	
+	var c = this;		
+  c.display = function() {		
+		c.data.message = (c.data.sometext) ? 'Hello ' + c.data.sometext + '!' : '';
+	}
+	
+	c.display();
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>h1 {
+color: #428bca;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data>{
+	"data": {
+		"sometext": "world"
+	}
+}</demo_data>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Copy of Hello World</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-08-18 12:04:06</sys_created_on>
+        <sys_id>7d1ae1e897b431109d8eb317f053af95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Copy of Hello World</sys_name>
+        <sys_package display_value="Hello World" source="x_1113045_hello_wo">d984292497b431109d8eb317f053af1c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Hello World">d984292497b431109d8eb317f053af1c</sys_scope>
+        <sys_update_name>sp_widget_7d1ae1e897b431109d8eb317f053af95</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-18 12:04:06</sys_updated_on>
+        <template><![CDATA[<div>
+ Enter your name:
+ <input type="text" ng-model="c.data.sometext" ng-change="c.display()"/>
+ <h1>{{ c.data.message }}</h1>
+</div>]]></template>
+    </sp_widget>
+</record_update>
